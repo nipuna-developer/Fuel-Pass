@@ -1,4 +1,46 @@
+/* === Disclaimer / Watermark === */
+.disclaimer-banner {
+    background: #dc2626;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    z-index: 9999;
+    position: relative;
+}
+
+.disclaimer-banner a {
+    color: #fef08a;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.disclaimer-banner a:hover {
+    color: #ffffff;
+}
+
+.not-original-badge {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(220, 38, 38, 0.92);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    pointer-events: none;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
 /* Base and Reset */
+
 * {
     margin: 0;
     padding: 0;
