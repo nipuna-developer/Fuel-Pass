@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Fuel Pass</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="emblem.png" alt="Sri Lanka Emblem">
+            </div>
+            <div class="lang-selector">
+                <button class="lang-btn active">English</button>
+                <button class="lang-btn">සිංහල</button>
+                <button class="lang-btn">தமிழ்</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container main-container">
+            <h1 class="main-title">NATIONAL FUEL PASS</h1>
+
+            <div class="vehicle-section">
+                <p class="section-subtitle">Vehicle</p>
+                <div class="action-card">
+                    <button class="action-btn">
+                        <span>Vehicle<br>Registration</span>
+                    </button>
+                    <button class="action-btn">
+                        <span>Vehicle<br>Login</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="info-alert">
+                <p>If your vehicle ownership or phone number has not changed, the QR code used previously will remain
+                    valid. If you do not currently have it, you can visit <a
+                        href="https://fuelpass.gov.lk/login">https://fuelpass.gov.lk/login</a> and download the code
+                    that belongs to you.</p>
+            </div>
+
+            <div class="notes-section">
+                <ul class="notes-list check-list">
+                    <li>Enter the Chassis number precisely as per the Certificate of Registration of Motor Vehicles
+                        (Case Sensitive)</li>
+                    <li>Vehicle registrations with Sri &ndash; to only enter the vehicle number in columns Ex: 3 Sri
+                        -1234 <span class="badge">3</span> <span class="badge">1234</span></li>
+                    <li>Vehicle category to be selected as per Certificate of Registration of Motor Vehicle. Applicable
+                        categories
+                        <div class="category-table-wrapper">
+                            <table class="category-table">
+                                <tbody>
+                                    <tr>
+                                        <td><strong>BIKE</strong></td>
+                                        <td>| MOTOR CYCLE / LIGHT MOTOR CYCLE</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>3WHEEL</strong></td>
+                                        <td>| MOTOR TRICYCLE / MOTOR TRICYCLE VAN / INVALID CARRIAGE</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>QUADRICYCLE</strong></td>
+                                        <td>| QUADRICYCLE</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>CAR</strong></td>
+                                        <td>| MOTOR CAR / INVALID CARRIAGE</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>VAN</strong></td>
+                                        <td>| DUAL PURPOSE VEHICLE</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>BUS</strong></td>
+                                        <td>| MOTOR COACH / PRIVATE COACH / OMINI BUS / LIGHT MOTOR COACH</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>LORRY</strong></td>
+                                        <td>| MOTOR LORRY / DUAL PURPOSE / LIGHT MOTOR LORRY / M/LORRY(PRIME MOVER) /
+                                            AMBULANCE / HEARSE / HEAVY MOTOR LORRY</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SPECIAL PURPOSE VEHICLE</strong></td>
+                                        <td>| LAND VEHICLE / SPECIAL PURPOSE VEHICLE / NON AGRICULTURE LAND VEHICLE</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>LAND VEHICLE</strong></td>
+                                        <td>| HAND TRACTOR / AGRICULTURE LAND VEHICLE</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>Only one NIC/PP is allowed per vehicle and per mobile no</li>
+                    <li>At registration NIC/Name/Address does not require to match Certificate of registration ownership
+                        details</li>
+                    <li>Company and Gov vehicles/bikes can be registered under BRN category. If require to register
+                        multiple vehicles follow below instructions.
+                        <ul class="sub-notes-list">
+                            <li>Under Nic number create a Unique code for your Institute (Numeric or Alphabetical) and
+                                this should be consistent for every vehicle profile.</li>
+                            <li>Any Commercial/Government ministry or institution/NGO/ Clubs etc to register under BRN
+                                category.</li>
+                            <li>Select BRN and follow the registration process.</li>
+                            <li>Multiple vehicles can be registered under a single mobile number.</li>
+                        </ul>
+                    </li>
+                    <li>Fuel Liter allocation will be based on vehicle category. Allocation will be announced by
+                        Ministry of power &amp; Energy</li>
+                    <li>Call 1919 for any registration related assistance</li>
+                </ul>
+            </div>
+
+            <div class="footer-logos">
+                <!-- ICTA Logo -->
+                <img src="ICTA.png" alt="ICTA" style="height:50px; object-fit:contain;">
+
+                <!-- Dialog Logo -->
+                <img src="dialog.png" alt="Dialog" style="height:50px; object-fit:contain; background:#fff;">
+
+                <!-- Millennium IT / MIT ESP Logo -->
+                <img src="MILLENNIUM.png" alt="Millennium IT ESP" style="height:50px; object-fit:contain;">
+            </div>
+        </div>
+    </main>
+
+    <!-- Registration Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" data-modal="registerModal">&times;</span>
+            <div class="modal-header">
+                <h2>Vehicle Registration</h2>
+            </div>
+            <form class="modal-form" id="registerForm">
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="text" placeholder="07X XXX XXXX" required>
+                </div>
+                <div class="form-group">
+                    <label>NIC / Passport Number</label>
+                    <input type="text" placeholder="Enter NIC or PP" required>
+                </div>
+                <div class="form-group">
+                    <label>Vehicle Number</label>
+                    <input type="text" placeholder="WP CAA-1234" required>
+                </div>
+                <div class="form-group">
+                    <label>Chassis Number</label>
+                    <input type="text" placeholder="Enter exactly as in CR" required>
+                </div>
+                <div class="form-link">
+                    <a href="#" id="openDeleteModalBtn">Vehicle already registered by previous owner? Remove it
+                        here.</a>
+                </div>
+                <button type="submit" class="submit-btn box-shadow-btn">Register Vehicle</button>
+            </form>
+
+            <!-- OTP Step (hidden initially) -->
+            <div id="regOtpStep" class="otp-step" style="display:none;">
+                <div class="otp-step-inner">
+                    <div class="otp-icon">📱</div>
+                    <p class="otp-sent-msg">OTP code has been sent to</p>
+                    <p id="otpPhoneDisplay" class="otp-phone-num"></p>
+                    <div class="form-group" style="margin-top:16px;">
+                        <label>Enter OTP</label>
+                        <input type="text" id="regOtpInput" placeholder="Enter 6-digit OTP" maxlength="6" autocomplete="one-time-code">
+                    </div>
+                    <p class="otp-resend">Didn't receive? <a href="#" id="resendOtpBtn">Resend OTP</a></p>
+                    <button id="verifyRegOtpBtn" class="submit-btn box-shadow-btn" style="width:100%; margin-top:8px;">Verify &amp; Register</button>
+                    <button id="backToRegFormBtn" class="btn-back" style="width:100%; margin-top:8px;">← Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" data-modal="loginModal">&times;</span>
+            <div class="modal-header">
+                <h2>Vehicle Login</h2>
+            </div>
+            <form class="modal-form" id="loginForm">
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="text" placeholder="Registered Mobile Number" required>
+                </div>
+                <div class="form-group">
+                    <label>OTP</label>
+                    <div class="otp-group">
+                        <input type="text" placeholder="Enter OTP" required>
+                        <button type="button" class="btn-secondary">Send OTP</button>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn box-shadow-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete/Transfer Modal (Second Hand) -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" data-modal="deleteModal">&times;</span>
+            <div class="modal-header">
+                <h2>Remove Existing Registration</h2>
+                <p style="font-size: 13px; color: #6b7280; margin-top: 5px;">For removing a vehicle registered under a
+                    previous owner.</p>
+            </div>
+            <form class="modal-form" id="deleteForm">
+                <div class="form-group">
+                    <label>Vehicle Number</label>
+                    <input type="text" placeholder="WP CAA-1234" required>
+                </div>
+                <div class="form-group">
+                    <label>New CR Book Number</label>
+                    <input type="text" placeholder="Enter new CR book number" required>
+                </div>
+                <div class="form-group">
+                    <label>Chassis Number</label>
+                    <input type="text" placeholder="Exact Chassis Number" required>
+                </div>
+                <div class="form-group">
+                    <label>Your NIC</label>
+                    <input type="text" placeholder="Enter your NIC" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="declareCheck" required>
+                    <label for="declareCheck">I declare that I am the new owner of this vehicle.</label>
+                </div>
+                <button type="submit" class="submit-btn danger-btn box-shadow-btn">Verify &amp; Remove</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
